@@ -22,7 +22,7 @@ class CryptageVigenere():
             exit()
         # Generation du tableau de Vigenere
         self.generation_tableau()
-        ligne_fichier = fichier_entree.readline()
+        ligne_fichier = fichier_entree.readline(5_000_000)
         while ligne_fichier != "":
             mot_filtre = self.filtre_mot(ligne_fichier)
             if int(option) == 0:
@@ -35,7 +35,7 @@ class CryptageVigenere():
                 print("Erreur option %s invalide"%(option))
                 break
             self.tableau_filtre_lettre_index = [[],[]]
-            ligne_fichier = fichier_entree.readline()
+            ligne_fichier = fichier_entree.readline(5_000_000)
         
         fichier_entree.close()
         fichier_sortie.close()
@@ -56,7 +56,7 @@ class CryptageVigenere():
             exit()
         # Generation du tableau de Vigenere
         self.generation_tableau()
-        ligne_fichier = fichier_entree.readline()
+        ligne_fichier = fichier_entree.readline(5_000_000)
         while ligne_fichier != "":
             mot_filtre = self.filtre_mot(ligne_fichier)
             if int(option) == 1:
@@ -69,7 +69,7 @@ class CryptageVigenere():
                 print("Erreur option invalide")
                 break
             self.tableau_filtre_lettre_index = [[],[]]
-            ligne_fichier = fichier_entree.readline()
+            ligne_fichier = fichier_entree.readline(5_000_000)
         
         fichier_entree.close()
         fichier_sortie.close()
